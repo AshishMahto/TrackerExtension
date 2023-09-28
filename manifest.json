@@ -1,5 +1,5 @@
 {
-  "name": "Tracker - fix Teammates stats",
+  "name": "Tracker.gg - fix Teammates stats",
   "version": "1.0.0",
   "description": "On the 'Matches' tab, Tracker.gg will display stats of the Current Act only, instead of the default Current Episode.",
   "icons": {
@@ -8,13 +8,13 @@
     "48": "icons/trn48.png",
     "128": "icons/trn128.png"
   },
+  "action": { "default_popup": "popup/popup.html" },
   "content_scripts": [
     {
-      "matches": [
-        "https://tracker.gg/valorant/profile/riot/*",
-        "https://trackercdn.com/*"
-      ],
-      "js": ["script.js"]
+      "matches": ["https://tracker.gg/valorant/profile/riot/*"],
+      "js": ["script.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
     }
   ],
   "manifest_version": 3
