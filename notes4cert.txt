@@ -1,0 +1,20 @@
+This extension's functionality is very limited. The only thing it does is affect some calculations that the external Tracker.gg website makes.
+
+The existing functionality on Tracker.gg:
+1. Visit https://tracker.gg/valorant/profile/riot/100T%20Asuna%231111/matches?playlist=competitive
+2. Note that on the left sidebar, Activity is for "Last 60 days."
+3. Changing the selected Act to "All Acts" on the top right tab selection buttons will not affect the "Last 60 days" calculation.
+
+The existing behaviour on Tracker.gg may be interpreted as a bug by the end user.
+One might expect that the Activity should reflect the selected Act.
+In fact, this functionality does exist, but only when selected Acts that are even older than the current one.
+For example:
+4. Changing the selected Act to "E7: A1" on the tab selection will change it so Activity is for "E7: A1 only."
+
+This "bug" is what this extension aims to fix.
+
+Extended functionality by enabling this extension:
+1. Visit https://tracker.gg/valorant/profile/riot/100T%20Asuna%231111/matches?playlist=competitive
+2. Note that on the left sidebar, Activity is for "E7: A2 only." (the numbers will change over time, but will reflect the tab selection exactly.)
+3. Changing the selected Act to "All Acts" on the top right tab selection buttons will change it so Activity is for "Last 60 days.", the original behaviour.
+4. Changing the selected Act to "E7: A1" on the tab selection will change it so Activity is for "E7: A1 only."
