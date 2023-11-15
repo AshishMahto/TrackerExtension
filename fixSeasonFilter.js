@@ -11,7 +11,7 @@ function main() {
       const i = source.indexOf("/valorant/config/routes.js");
       const a = source.indexOf("./", i);
       const b = source.indexOf(".js", a);
-      const jsFile = indexJs.replace(/index[\w.]*js/, source.slice(a + 2, b + 3));
+      const jsFile = indexJs.replace(/index[^.]*\.js/, source.slice(a + 2, b + 3));
       import(jsFile).then((RouterModule) => RouterModule.default()
         .flatMap((x) => x.children ?? [])
         .find(({path}) => path === "matches")

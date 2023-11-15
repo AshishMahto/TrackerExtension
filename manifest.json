@@ -1,6 +1,6 @@
 {
   "name": "Tracker.gg - fix Teammates stats",
-  "version": "1.0.0.2",
+  "version": "1.0.1",
   "description": "On the 'Matches' tab, Tracker.gg will display Teammate stats of the Current Act only, instead of the default Last 60 days.",
   "icons": {
     "16": "icons/trnfix16.png",
